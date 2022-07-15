@@ -4,16 +4,14 @@ import discord
 
 from dotenv import load_dotenv
 
+# Pour charger le fichier .env, où les variables sensitives sont stocké
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
-# client = discord.Client()
-
 # Necessaire pour les droits du Bot, sinon certaines fonctionnalités ne seront pas disponible : https://discordpy.readthedocs.io/en/latest/intents.html
 intents = discord.Intents.default()
 intents.members = True
-# test
 
 client = discord.Client(intents=intents)
 
